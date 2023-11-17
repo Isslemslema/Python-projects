@@ -19,7 +19,7 @@ else:
     song=l[0]
 mixer.init()
 mixer.music.load(song)
-pygame.init() #manadatory statement for python game initialization
+pygame.init()
 
 display_width=800
 display_height=600
@@ -30,15 +30,13 @@ red=(255,0,0)
 block_color=(225,0,0)
 
 gameDisplay=pygame.display.set_mode((display_width,display_height))
-clock=pygame.time.Clock() #set the clock for ur game (frames per sec)
+clock=pygame.time.Clock() 
 
 #make a game loop
 
 basewidth = 50
 hsize=50
 img = Image.open('racecar.png')
-#wpercent = (basewidth/float(img.size[0]))
-#hsize = int((float(img.size[1])*float(wpercent)))
 img = img.resize((basewidth,hsize), Image.ANTIALIAS)
 img.save('rcar.jpg')
 carImg=pygame.image.load('rcar.jpg')
